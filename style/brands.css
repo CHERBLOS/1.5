@@ -1,0 +1,166 @@
+html {
+  font-family: 'TT Lakes', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+.brands {
+  background-color: #F2F2F2;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.brands__header {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #7E7E82;
+  padding: 1rem;
+  margin: 0 auto;
+  border-top: 1px solid #D9FFF5;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #F2F2F2 30%, #FFFFFF 98.61%);
+}
+
+.brands__list{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.brands__list-item{
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  max-width: 15rem;
+  max-height: 4.5rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.swiper-pagination{
+  display: none;
+}
+
+.brands__link{
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #FF3E79;
+}
+
+.brands__link::before{
+  content: url('../assets/img/ic/dropdown.svg');
+  position: absolute;
+  top: 25%;
+  left: 40%;
+
+}
+
+.brands__button{
+  font-weight: 500;
+  margin-left: 1.5rem;
+  background-color:inherit;
+  border: none;
+}
+
+.brands__button::before{
+  content: url('../assets/img/ic/expand.svg');
+  margin-right: 0.5rem;
+  display: inline-block;
+  transform: translateY(0.4rem);
+}
+
+.brands__button--active::before{
+  transform: rotate(180deg) translateY(-0.25rem);
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+  .brands__container{
+    position: relative;
+    height: 8.25rem;
+  }
+
+  .brands__list{
+    margin-left: 1rem;
+  }
+
+  .brands__list-item{
+    margin-right: 1rem;
+  }
+
+  .swiper-wrapper{
+    max-height: 6.25rem;
+  }
+
+  .swiper-pagination{
+    display: block;
+  }
+
+  .brands__button{
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1119px){
+  .brands__header{
+    padding-left: 1.5rem;
+  }
+
+  .brands__minimized {
+    height: 12.5rem;
+    overflow: hidden;
+  }
+  
+  .brands__list{
+    flex-wrap: wrap;
+    margin: 1.5rem 1.5rem 0 1.5rem;
+  }
+
+  .brands__list-item{
+    max-width: 14rem;
+    min-height: 4.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .brands__container{
+    overflow: hidden;
+  }
+
+}
+
+@media (min-width: 1120px){
+  .brands__header{
+    padding-left: 2rem;
+  }
+
+  .brands__minimized {
+    height: 12.5rem;
+    overflow: hidden;
+  }
+
+  .brands__list{
+    flex-wrap: wrap;
+    margin: 2rem;
+  }
+
+  .brands__list-item{
+    max-width: 15rem;
+    min-height: 4.5rem;
+    margin-right: 2rem;
+  }
+
+  .brands__button{
+    margin-left: 2rem;
+  }
+}
