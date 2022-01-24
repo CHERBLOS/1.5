@@ -68,8 +68,10 @@ body {
 }
 
 .brands__button{
+  font-family: inherit;
   font-weight: 500;
   margin-left: 1.5rem;
+  margin-top: .5rem;
   background-color:inherit;
   border: none;
 }
@@ -79,10 +81,11 @@ body {
   margin-right: 0.5rem;
   display: inline-block;
   transform: translateY(0.4rem);
+  transition-duration: 0.8s;
 }
 
 .brands__button--active::before{
-  transform: rotate(180deg) translateY(-0.25rem);
+  transform: rotate(180deg) translateY(-0.15rem);
 }
 
 @media (min-width: 320px) and (max-width: 767px){
@@ -151,7 +154,7 @@ body {
 
   .brands__list{
     flex-wrap: wrap;
-    margin: 2rem;
+    margin: 2rem 2rem 1rem 2rem;
   }
 
   .brands__list-item{
